@@ -312,6 +312,7 @@
     <Content Include="Views\Category\Danhsachdanhmuc.cshtml" />
     <Content Include="Views\New\Danhsachbaiviet.cshtml" />
     <Content Include="Views\New\ChiTiet.cshtml" />
+    <Content Include="Views\Category\ChiTiet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

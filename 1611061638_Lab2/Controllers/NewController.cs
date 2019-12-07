@@ -28,6 +28,10 @@ namespace _1611061638_Lab2.Controllers
         {
             NhadatEntities db = new NhadatEntities();
 
+            if(id == null)
+            {
+                return HttpNotFound();
+            }
             var baiviet = db.News.SingleOrDefault(s => s.ID == id);
 
             return View(baiviet);

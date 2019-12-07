@@ -19,16 +19,22 @@ namespace _1611061638_Lab2
                defaults: new { controller = "Category", action = "Danhsachdanhmuc", id = UrlParameter.Optional }
            );
 
+           routes.MapRoute(
+             "Danh mục",
+             "danh-muc/chi-tiet-danh-muc-{id}",
+             new { controller = "Category", action = "ChiTiet" }, new {id = @"d\+"}
+        );
+
             routes.MapRoute(
                name: "Danh sách bài viết",
                url: "bai-viet/danh-sach-bai-viet",
-               defaults: new { controller = "New", action = "Danhsachbaiviet", id = UrlParameter.Optional }
+               defaults: new { controller = "New", action = "Danhsachbaiviet" }
            );
 
-            routes.MapRoute(
-              name: "Bài viết",
-              url: "bai-viet/chi-tiet-{id}",
-              defaults: new { controller = "New", action = "ChiTiet", id = UrlParameter.Optional }
+          routes.MapRoute(
+               "Bài viết",
+               "bai-viet/{alias}-{id}",
+               new { controller = "New", action = "ChiTiet" }, new {id= @"\d+"}
           );
 
             routes.MapRoute(

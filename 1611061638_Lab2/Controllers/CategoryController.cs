@@ -20,5 +20,16 @@ namespace _1611061638_Lab2.Controllers
             var danhsachdanhmuc = from s in db.Categories select s;
             return View(danhsachdanhmuc);
         }
+        public ActionResult ChiTiet(int id)
+        {
+            NhadatEntities db = new NhadatEntities();
+
+            var bv = from s in db.Categories where s.ID == id select s;
+
+            return View(bv.Single());
+
+
+        }
+       
     }
 }

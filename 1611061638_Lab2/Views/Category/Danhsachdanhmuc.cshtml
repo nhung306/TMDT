@@ -8,7 +8,7 @@
 <h2>Danh sách danh mục</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create")
 </p>
 <table class="table">
     <tr>
@@ -37,7 +37,7 @@
         </td>
         <td>
             @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Chi tiết", "Details", new { id=item.ID }) |
+            <a href="/@Html.DisplayFor(modelItem => item.Alias)- @Html.DisplayFor(modelItem => item.ID)">Chi tiết</a> |
             @Html.ActionLink("Xóa", "Delete", new { id=item.ID })
         </td>
     </tr>
